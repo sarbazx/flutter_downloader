@@ -55,7 +55,8 @@ public class FlutterDownloaderPlugin implements MethodCallHandler, FlutterPlugin
     @SuppressLint("NewApi")
     public static void registerWith(PluginRegistry.Registrar registrar) {
       if (instance == null) {
-        instance = new FlutterDownloaderPlugin(registrar.context(), registrar.messenger());
+        instance = new FlutterDownloaderPlugin();
+        instance.onAttachedToEngine(registrar.context(), registrar.messenger());
 
       }
         Application application = (Application) registrar.context().getApplicationContext();
