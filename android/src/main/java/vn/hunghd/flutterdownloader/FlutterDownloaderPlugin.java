@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.app.Application;
 
 import androidx.core.app.NotificationManagerCompat;
 
